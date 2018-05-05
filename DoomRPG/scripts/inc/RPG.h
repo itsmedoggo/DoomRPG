@@ -11,6 +11,7 @@ extern bool Transported;
 extern bool GlobalsInitialized;
 extern int CompatMode;
 extern bool WadSmoosh;
+extern bool ColourfulHell;
 
 // Arrays
 extern str PlayerWeapon[MAX_PLAYERS];

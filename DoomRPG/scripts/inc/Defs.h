@@ -228,7 +228,7 @@ typedef enum
 // CharSave
 //
 
-#define CHARSAVE_VERSION        16
+#define CHARSAVE_VERSION        15
 #define CHARSAVE_MAXSIZE        224
 #define CHARSAVE_MAXCVARS       16
 #define DRLA_MODPACK_SIZE       9
@@ -508,8 +508,10 @@ typedef enum
 #define MAX_MONSTERS            16384
 #define MAX_DEF_MONSTERS        17
 #define MAX_DEF_MONSTERS_DRLA   72
-#define MAX_TEMP_MONSTERS       100
+#define MAX_DEF_MONSTERS_CH		129
+#define MAX_TEMP_MONSTERS       150
 #define MAX_MEGABOSSES          2
+#define MAX_MEGABOSSES_CH		4
 
 typedef enum
 {
@@ -538,7 +540,7 @@ typedef enum
 //
 
 #define NAME_MAX_SHARED         91
-#define NAME_MAX_DEMON_NAMES    109
+#define NAME_MAX_DEMON_NAMES    107
 #define NAME_MAX_BOSS_SUFFIXES  27
 #define NAME_MAX_COLORS         20
 #define NAME_MAX_ZOMBIE_RANK    9
@@ -637,7 +639,7 @@ typedef enum
 #define ASAVE_SAFETIME          20 * 35
 #define ASAVE_RETRYTIME         5 * 35
 #define MAX_ITEMS               65535
-#define MAX_TIPS                75
+#define MAX_TIPS                76
 
 #define LOADOUT_WEAPONS         8
 #define LOADOUT_ARMORS          10

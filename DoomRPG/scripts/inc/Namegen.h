@@ -16,6 +16,7 @@ extern str PowersuitNames[NAME_MAX_SUIT];
 extern str NameColors[NAME_MAX_COLORS];
 
 str GenerateName(str Actor, str Tag);
+str GenerateColourfulHellName(str Actor, str Tag);
 str GenerateMonsterName();
 str GenerateZombieName(bool Female);
 str GenerateMarineName(bool Female);
