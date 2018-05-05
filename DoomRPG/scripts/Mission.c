@@ -436,16 +436,20 @@ void GetTargetMonster(MissionInfo *Mission)
     int NumPotentialMonsters;
     int MonsterDataAmount;
 
-    if (DRLA)
+	if (ColourfulHell)
+        MonsterDataAmount = MAX_DEF_MONSTERS_CH;
+    else if (DRLA)
         MonsterDataAmount = MAX_DEF_MONSTERS_DRLA;
-    else
-        MonsterDataAmount = MAX_DEF_MONSTERS;
+	else
+		MonsterDataAmount = MAX_DEF_MONSTERS;
 
     // Generate a list based on monsters' threat levels.
     for (int i = 0; i < MonsterDataAmount; i++)
     {
         MonsterInfoPtr TempMonster;
-        if (DRLA)
+		if (ColourfulHell)
+            TempMonster = &MonsterDataCH[i];
+        else if (DRLA)
             TempMonster = &MonsterDataDRLA[i];
         else if (CompatMode == COMPAT_LEGENDOOM)
             TempMonster = &MonsterDataLD[i];

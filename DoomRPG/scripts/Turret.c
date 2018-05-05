@@ -2609,15 +2609,35 @@ bool TurretStim()
         return false;
     }
     
+    bool Powerups = (Player.Turret.Upgrade[TU_ASSIST_INJECTOR_TYPE] > 1);
+    int MaxAmount = Player.Turret.Upgrade[TU_ASSIST_INJECTOR_AMOUNT];
     int Potency = Player.Turret.Upgrade[TU_ASSIST_INJECTOR_POTENCY];
-
-    // Multipliers
-    if (Player.Turret.StimVialType == STIM_PURIFIER)
-        Potency /= 10;
-    if (Player.Turret.StimVialType == STIM_POTENCY)
-        Potency /= 5;
+    int Amount = 0;
     
+	
+	/*
     // Generate the stim
+    if (Player.Turret.StimFocused) // Focused Injection
+    {
+        // Multipliers
+        if (Player.Turret.StimVialType < StimStatsEnd)
+            Potency *= 10;
+        if (Player.Turret.StimVialType == STIM_PURIFIER || Player.Turret.StimVialType == STIM_POTENCY)
+            Potency *= 2;
+        
+        Player.Stim.Current[Player.Turret.StimVialType] += Potency;
+    }
+    else // Broad injection
+        while (Amount++ < MaxAmount)
+            Player.Stim.Current[Random(0, (Powerups ? StimPowerupEnd : StimStatsEnd))] += Potency;
+    
+    // Reset stim cooldown timer
+    if (Player.Turret.StimFocused)
+        Player.Turret.StimTimer = 60 * 10 - (Player.Turret.Upgrade[TU_ASSIST_INJECTOR] * 30);
+    else
+        Player.Turret.StimTimer = 60 * 5 - (Player.Turret.Upgrade[TU_ASSIST_INJECTOR] * 24);
+    */
+	// Generate the stim
     if (Player.Turret.StimFocused) // Focused Injection
         Player.Stim.Current[Player.Turret.StimVialType] += Potency * 10;
     else // Broad injection

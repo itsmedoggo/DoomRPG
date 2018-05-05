@@ -30,6 +30,7 @@ bool Transported;
 bool GlobalsInitialized;
 int CompatMode;
 bool WadSmoosh;
+bool ColourfulHell;
 
 // Arrays
 str PlayerWeapon[MAX_PLAYERS];
@@ -2198,6 +2199,7 @@ void CheckCompatibility()
 
     CompatMode = COMPAT_NONE;
     WadSmoosh = false;
+	ColourfulHell = false;
     
     //WadSmoosh
     Success = SpawnForced("DRPGWadSmooshActive", 0, 0, 0, TID, 0);
@@ -2220,6 +2222,16 @@ void CheckCompatibility()
         return;
     }
 
+	// Colourful Hell
+	Success = SpawnForced("GreenZombie", 0, 0, 0, TID, 0);
+    if (Success)
+    {
+        if (GetCVar("drpg_debug"))
+            Log("\CdDEBUG: \CdColourful Hell\C- detected");
+        ColourfulHell = true;
+        Thing_Remove(TID);
+    }
+	
     // DoomRL
     Success = SpawnForced("RLKateMatterstormHarnessArmorToken", 0, 0, 0, TID, 0);
     if (Success)

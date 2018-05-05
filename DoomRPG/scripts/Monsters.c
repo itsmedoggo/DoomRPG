@@ -49,7 +49,7 @@ MonsterInfo const MonsterDataLD[MAX_DEF_MONSTERS] =
     { "LDBaronOfHell",                        "Baron of Hell",                    30,     0, false, "Seems you've found Hell's nobility!" },
     { "LDPainElemental",                      "Pain Elemental",                   40,     0, false, "You feel you are being watched!" },
     { "LDRevenant",                           "Revenant",                         50,     0, false, "Bones clatter all around you!" },
-    { "LDMancubus",                              "Mancubus",                         60,     0, false, "You hear deep, guttural noises!" },
+    { "LDMancubus",                           "Mancubus",                         60,     0, false, "You hear deep, guttural noises!" },
     { "LDArachnotron",                        "Arachnotron",                      60,     0, false, "Leg servos squeak and whirr nearby!" },
     { "LDArchvile",                           "Arch-Vile",                        70,     0, false, "You hear crackling flames!" },
     { "LDCyberdemon",                         "Cyberdemon",                       85,     0, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
@@ -166,10 +166,184 @@ MonsterInfo const MonsterDataDRLA[MAX_DEF_MONSTERS_DRLA] =
 //  { "RLArmageddonSpiderMastermind2",      "Supreme Overmind",                 100,    10, true, "Seems like you found the grand leaders of the invasion here!" }
 };
 
+MonsterInfo const MonsterDataCH[MAX_DEF_MONSTERS_CH] =
+{
+	// Zombieman - 8
+    { "CommonZombie",                         "Former Human",                     1,      0, false, "You hear shuffling footsteps and moans!" },
+	{ "GreenZombie",                          "Uncommon Former Human",            2,      0, false, "You hear shuffling footsteps and moans!" },
+	{ "BlueZombie",                           "Rare Former Human",                2,      0, false, "You hear shuffling footsteps and moans!" },
+	{ "PurpleZombie",                         "Epic Former Human",                3,      0, false, "You hear shuffling footsteps and moans!" },
+	{ "YellowZombie",                         "Legendary Former Human",           3,      1, false, "You hear shuffling footsteps and moans!" },
+	{ "RedZombie",                            "Demonic Former Human",             8,      1, false, "You hear shuffling footsteps and moans!" },
+	{ "BlackZombie1",                         "Player 9",                         70,     3, true,  "You hear shuffling footsteps and moans!" },
+	{ "WhiteZombie1",                         "The Undertaker",                   90,     4, true,  "You hear shuffling footsteps and moans!" },
+	
+	// Shotgunner - 8
+    { "CommonSG",                             "Former Sergeant",                  2,      0, false, "You hear the sound of shotguns pumping!" },
+	{ "GreenSG",                              "Uncommon Former Sergeant",         3,      0, false, "You hear the sound of shotguns pumping!" },
+	{ "BlueSG",                               "Rare Former Sergeant",             4,      0, false, "You hear the sound of shotguns pumping!" },
+	{ "PurpleSG",                             "Epic Former Sergeant",             5,      0, false, "You hear the sound of shotguns pumping!" },
+	{ "YellowSG",                             "Legendary Former Sergeant",        6,      1, false, "You hear the sound of shotguns pumping!" },
+	{ "RedSG",                                "Demonic Former Sergeant",          10,      1, false, "You hear the sound of shotguns pumping!" },
+	{ "BlackSG3",                             "Shotgun Crew Commander",           75,     3, true,  "You hear the sound of shotguns pumping!" },
+	{ "WhiteSG2",                             "Benellus, God of Shotguns",        90,     4, true,  "You hear the sound of shotguns pumping!" },
+	
+	// Chaingunner - 8
+    { "CommonCguy",                           "Former Commando",                  5,      0, false, "Quiet mutters and whirring set you on edge!" },
+	{ "GreenCguy",                            "Uncommon Former Commando",         6,      0, false, "Quiet mutters and whirring set you on edge!" },
+	{ "BlueCguy",                             "Rare Former Commando",             8,      0, false, "Quiet mutters and whirring set you on edge!" },
+	{ "PurpleCguy",                           "Epic Former Commando",             10,     1, false, "Quiet mutters and whirring set you on edge!" },
+	{ "YellowCguy",                           "Legendary Former Commando",        14,     1, false, "Quiet mutters and whirring set you on edge!" },
+	{ "RedCguy",                              "Demonic Former Commando",          16,     2, false, "Quiet mutters and whirring set you on edge!" },
+	{ "BlackCguy2",                           "Mr. General",                      70,     3, true,  "Quiet mutters and whirring set you on edge!" },
+	{ "WhiteCguy2",                           "Crazy Lady Scientist",             80,     4, true,  "Quiet mutters and whirring set you on edge!" },
+	
+	// Imp - 8
+    { "CommonImp",                            "Imp",                              4,      0, false, "The walls are scratched and flame-scorched!" },
+	{ "GreenImp",                             "Uncommon Imp",                     5,      0, false, "The walls are scratched and flame-scorched!" },
+	{ "BlueImp",                              "Rare Imp",                         6,      0, false, "The walls are scratched and flame-scorched!" },
+	{ "PurpleImp",                            "Epic Imp",                         7,      0, false, "The walls are scratched and flame-scorched!" },
+	{ "YellowImp",                            "Legendary Imp",                    9,      1, false, "The walls are scratched and flame-scorched!" },
+	{ "RedImp",                               "Demonic Imp",                      15,     1, false, "The walls are scratched and flame-scorched!" },
+	{ "BlackImp1",                            "Smoking Black Imp",                50,     2, true,  "The walls are scratched and flame-scorched!" },
+	{ "WhiteImp2",                            "Imp Master",                       60,     3, true,  "The walls are scratched and flame-scorched!" },
+	
+	// Demon - 8
+    { "CommonDemon",                          "Demon",                            3,      0, false, "Hungry growls echo around you!" },
+	{ "GreenDemon",                           "Uncommon Demon",                   4,      0, false, "Hungry growls echo around you!" },
+	{ "BlueDemon",                            "Rare Demon",                       5,      0, false, "Hungry growls echo around you!" },
+	{ "PurpleDemon",                          "Epic Demon",                       6,      0, false, "Hungry growls echo around you!" },
+	{ "YellowDemon",                          "Legendary Demon",                  12,     1, false, "Hungry growls echo around you!" },
+	{ "RedDemon",                             "Demonic Demon",                    21,     2, false, "Hungry growls echo around you!" },
+	{ "BlackDemon3",                          "The Butcher",                      55,     3, true,  "Hungry growls echo around you!" },
+	{ "WhiteDemon2",                          "The Juggernaut",                   70,     4, true,  "Hungry growls echo around you!" },
+	
+	// Spectre - 8
+    { "CommonSpectre",                        "Spectre",                          3,      0, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "GreenSpectre",                         "Uncommon Spectre",                 4,      0, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "BlueSpectre",                          "Rare Spectre",                     5,      0, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "PurpleSpectre",                        "Epic Spectre",                     7,      0, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "YellowSpectre",                        "Legendary Spectre",                14,     1, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "RedSpectre",                           "Demonic Spectre",                  20,     2, false, "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "BlackSpectre2",                        "The Rogue",                        64,     3, true,  "It's dark, you are likely to be eaten by a... Spectre?" },
+	{ "WhiteSpectre2",                        "???",                              77,     4, true,  "It's dark, you are likely to be eaten by a... Spectre?" },
+	
+	// Cacodemon - 8
+    { "CommonCaco",                           "Cacodemon",                        10,     0, false, "Screeches drown out all other sound!" },
+	{ "GreenCaco",                            "Uncommon Cacodemon",               11,     0, false, "Screeches drown out all other sound!" },
+	{ "BlueCaco",                             "Rare Cacodemon",                   12,     1, false, "Screeches drown out all other sound!" },
+	{ "PurpleCaco",                           "Epic Cacodemon",                   14,     1, false, "Screeches drown out all other sound!" },
+	{ "YellowCaco",                           "Cacolich",                         22,     2, false, "Screeches drown out all other sound!" },
+	{ "RedCaco",                              "Demonic Cacodemon",                30,     3, false, "Screeches drown out all other sound!" },
+	{ "BlackCaco2",                           "Shockmaster",                      56,     4, true,  "Screeches drown out all other sound!" },
+	{ "WhiteCaco2",                           "White Cacodemon",                  87,     5, true,  "Screeches drown out all other sound!" },
+	
+	// Hell Knight - 8
+    { "CommonHK",                             "Hell Knight",                      20,     0, false, "A battle cry chants in the distance!" },
+	{ "GreenHK",                              "Uncommon Hell Knight",             22,     0, false, "A battle cry chants in the distance!" },
+	{ "BlueHK",                               "Rare Hell Knight",                 24,     1, false, "A battle cry chants in the distance!" },
+	{ "PurpleHK",                             "Epic Hell Knight",                 29,     1, false, "A battle cry chants in the distance!" },
+	{ "YellowHK",                             "Bruiser",                          38,     2, false, "A battle cry chants in the distance!" },
+	{ "RedHK",                                "Hell Knightmare",                  50,     3, false, "A battle cry chants in the distance!" },
+	{ "BlackHK2",                             "The Terminator",                   74,     4, true,  "A battle cry chants in the distance!" },
+	{ "WhiteHK3",                             "Ghost of 1993",                    84,     5, true,  "A battle cry chants in the distance!" },
+	
+	// Baron - 7
+    { "CommonBaron",                          "Baron of Hell",                    30,     0, false, "Seems you've found Hell's nobility!" },
+	{ "GreenBaron",                           "Uncommon Baron of Hell",           34,     1, false, "Seems you've found Hell's nobility!" },
+	{ "BlueBaron",                            "Rare Baron of Hell",               38,     2, false, "Seems you've found Hell's nobility!" },
+	{ "PurpleBaron",                          "Epic Baron of Hell",               42,     3, false, "Seems you've found Hell's nobility!" },
+	{ "YellowBaron",                          "Grand Baron of Hell",              55,     3, false, "Seems you've found Hell's nobility!" },
+	{ "RedBaron3",                            "Red Baron",                        69,     4, false, "Seems you've found Hell's nobility!" },
+	{ "BlackBaron2",                          "Baron of the Abyss",               90,     5, true,  "Seems you've found Hell's nobility!" },
+	
+	// Lost Soul - 8
+	{ "CommonLSoul",                          "Lost Soul",                        3,      0, false, "The sound of many flames echo about!" },
+	{ "GreenLSoul",                           "Uncommon Lost Soul",               4,      0, false, "The sound of many flames echo about!" },
+	{ "BlueLSoul",                            "Rare Lost Soul",                   5,      0, false, "The sound of many flames echo about!" },
+	{ "PurpleLSoul",                          "Epic Lost Soul",                   6,      0, false, "The sound of many flames echo about!" },
+	{ "YellowLSoul",                          "Legendary Lost Soul",              8,      0, false, "The sound of many flames echo about!" },
+	{ "RedLSoul",                             "Bloody Lost Soul",                 12,     1, false, "The sound of many flames echo about!" },
+	{ "BlackLSoul3",                          "Queen Bee",                        18,     2, true,  "The sound of many flames echo about!" },
+	{ "WhiteLSoul2",                          "The Shifter",                      25,     3, true,  "The sound of many flames echo about!" },
+	
+	// Pain Elemental - 8
+    { "CommonPE",                             "Pain Elemental",                   40,     0, false, "You feel you are being watched!" },
+	{ "GreenPE",                              "Uncommon Pain Elemental",          42,     1, false, "You feel you are being watched!" },
+	{ "BluePE",                               "Rare Pain Elemental",              44,     1, false, "You feel you are being watched!" },
+	{ "PurplePE",                             "Epic Pain Elemental",              46,     2, false, "You feel you are being watched!" },
+	{ "YellowPE",                             "Volcanic Pain Elemental",          55,     3, false, "You feel you are being watched!" },
+	{ "RedPE",                                "Rage Elemental",                   65,     4, false, "You feel you are being watched!" },
+	{ "BlackPE2",                             "Hell Soul Elemental",              80,     5, true,  "You feel you are being watched!" },
+	{ "WhitePE2",                             "The Watcher",                      95,     5, true,  "You feel you are being watched!" },
+	
+	// Revenant - 7
+    { "CommonRevenant",                       "Revenant",                         50,     0, false, "Bones clatter all around you!" },
+	{ "GreenRevenant",                        "Uncommon Revenant",                52,     1, false, "Bones clatter all around you!" },
+	{ "BlueRevenant",                         "Rare Revenant",                    54,     1, false, "Bones clatter all around you!" },
+	{ "PurpleRevenant",                       "Epic Revenant",                    58,     2, false, "Bones clatter all around you!" },
+	{ "YellowRevenant",                       "Ghostly Revenant",                 68,     3, false, "Bones clatter all around you!" },
+	{ "RedRevenant",                          "Bloody Revenant",                  78,     4, false, "Bones clatter all around you!" },
+	{ "BlackRevenant3",                       "The Black Knight",                 88,     5, true,  "Bones clatter all around you!" },
+	
+	// Mancubus - 7
+    { "CommonFatso",                          "Mancubus",                         50,     0, false, "You hear deep, guttural noises!" },
+	{ "GreenFatso",                           "Uncommon Mancubus",                54,     1, false, "You hear deep, guttural noises!" },
+	{ "BlueFatso",                            "Rare Mancubus",                    58,     1, false, "You hear deep, guttural noises!" },
+	{ "PurpleFatso",                          "Epic Mancubus",                    63,     2, false, "You hear deep, guttural noises!" },
+	{ "YellowFatso",                          "Legendary Mancubus",               70,     3, false, "You hear deep, guttural noises!" },
+	{ "RedFatso",                             "Horned Beast",                     80,     4, false, "You hear deep, guttural noises!" },
+	{ "BlackFatso2",                          "Dark Beast",                       91,     5, true,  "You hear deep, guttural noises!" },
+	
+	// Arachnotron - 8
+    { "CommonSP",                             "Arachnotron",                      45,     0, false, "Leg servos squeak and whirr nearby!" },
+	{ "GreenSP",                              "Uncommon Arachnotron",             50,     0, false, "Leg servos squeak and whirr nearby!" },
+	{ "BlueSP",                               "Rare Arachnotron",                 55,     1, false, "Leg servos squeak and whirr nearby!" },
+	{ "PurpleSP",                             "Epic Arachnotron",                 60,     2, false, "Leg servos squeak and whirr nearby!" },
+	{ "YellowSP",                             "Brainchotron",                     67,     3, false, "Leg servos squeak and whirr nearby!" },
+	{ "RedSP",                                "Raging Arachnotron",               78,     4, false, "Leg servos squeak and whirr nearby!" },
+	{ "BlackSP2",                             "Explosive Arachnotron",            87,     5, true,  "Leg servos squeak and whirr nearby!" },
+	{ "WhiteSP11",                            "White Spider",                     90,     5, true,  "Leg servos squeak and whirr nearby!" },
+	
+	// Archvile - 8
+    { "CommonArch",                           "Archvile",                         70,     0, false, "You hear crackling flames!" },
+	{ "GreenArch",                            "Uncommon Archvile",                74,     1, false, "You hear crackling flames!" },
+	{ "BlueArch",                             "Rare Archvile",                    78,     1, false, "You hear crackling flames!" },
+	{ "PurpleArch",                           "Epic Archvile",                    82,     2, false, "You hear crackling flames!" },
+	{ "YellowArch",                           "Golden Archvile",                  86,     3, false, "You hear crackling flames!" },
+	{ "RedArch2",                             "Infernovile",                      90,     4, false, "You hear crackling flames!" },
+	{ "BlackVile",                            "The Void",                         94,     5, true,  "You hear crackling flames!" },
+	{ "Whitevile",                            "Godly Archvile",                   98,     5, true,  "You hear crackling flames!" },
+	
+	// Cyberdemon - 6
+    { "CommonCybie",                          "Cyberdemon",                       85,     1, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	{ "GreenCybie",                           "Uncommon Cyberdemon",              88,     2, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	{ "BlueCybie",                            "Rare Cyberdemon",                  92,     3, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	{ "PurpleCybie",                          "Epic Cyberdemon",                  95,     4, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	{ "YellowCybie",                          "Legendary Cyberdemon",             99,     4, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	{ "RedCybie",                             "Moloch",                           100,    5, true,  "Suddenly you have a great urge to turn back! You scream in TERROR!" },
+	
+	// Mastermind - 6
+    { "CommonMind",                           "Spider Mastermind",                95,     1, true,  "You've stumbled into a hive of the deadliest kind!" },
+	{ "GreenMind",                            "Uncommon Spider Mastermind",       96,     2, true,  "You've stumbled into a hive of the deadliest kind!" },
+	{ "BlueMind",                             "Rare Spider Mastermind",           97,     3, true,  "You've stumbled into a hive of the deadliest kind!" },
+	{ "PurpleMind",                           "Epic Spider Mastermind",           98,     4, true,  "You've stumbled into a hive of the deadliest kind!" },
+	{ "YellowMind",                           "Legendary Spider Mastermind",      99,     4, true,  "You've stumbled into a hive of the deadliest kind!" },
+	{ "RedMind",                              "Arachnophyte",                     100,    5, true,  "You've stumbled into a hive of the deadliest kind!" }
+};
+
 MegabossInfo const MegaBosses[MAX_MEGABOSSES] =
 {
     { "DRPGMegabossPride",   "Pride" },
     { "DRPGMegabossSloth",   "Sloth" },
+};
+
+MegabossInfo const MegaBossesCH[MAX_MEGABOSSES_CH] =
+{
+	{ "DRPGMegabossPride",   "Pride" },
+    { "DRPGMegabossSloth",   "Sloth" },
+	{ "BlackCybie2RPG",		"Cybersmith" },
+	{ "BlackMind2RPG",		"Queen Arachne" },
 };
 
 int NewMonsterID()
@@ -870,7 +1044,7 @@ OptionalArgs(1) NamedScript void MonsterInitStats(int StatFlags)
     SetActorProperty(0, APROP_Health, Stats->HealthMax);
     
     // Generate Name
-    if (!Stats->Named && (Stats->Flags & MF_MEGABOSS || Stats->Flags & MF_NAMEGEN || MonsterHasShadowAura(Stats)))
+    if (ColourfulHell || (!Stats->Named && (Stats->Flags & MF_MEGABOSS || Stats->Flags & MF_NAMEGEN || MonsterHasShadowAura(Stats))))
     {
         SetActorPropertyString(0, APROP_NameTag, GenerateName(GetActorClass(0), GetActorPropertyString(0, APROP_NameTag)));
         Stats->Named = true;
@@ -2139,14 +2313,18 @@ NamedScript DECORATE void MonsterTransport(int Difficulty, int Time, int Radius)
     MonsterInfoPtr TempMonster;
     
     // Build a list of monsters
-    if (DRLA)
+	if (ColourfulHell)
+        MonsterDataAmount = MAX_DEF_MONSTERS_CH;
+    else if (DRLA)
         MonsterDataAmount = MAX_DEF_MONSTERS_DRLA;
     else
         MonsterDataAmount = MAX_DEF_MONSTERS;
     
     for (int i = 0; i < MonsterDataAmount && MonsterListLength < MAX_TEMP_MONSTERS; i++)
     {
-        if (DRLA)
+		if (ColourfulHell)
+			TempMonster = &MonsterDataCH[i];
+        else if (DRLA)
             TempMonster = &MonsterDataDRLA[i];
         else if (CompatMode == COMPAT_LEGENDOOM)
             TempMonster = &MonsterDataLD[i];
@@ -2389,8 +2567,24 @@ int CalculateMonsterThreatLevel(MonsterStatsPtr Stats)
     if (Stats->Flags & MF_MEGABOSS)
         Threat += 2;
     
+	//CH
+	if (ColourfulHell)
+	{
+        str Actor = GetActorClass(0);
+        
+        for (int i = 0; i < MAX_DEF_MONSTERS_CH; i++)
+        {
+            MonsterInfoPtr MonsterIterPtr = &MonsterDataCH[i];
+            
+            if (StartsWith(Actor, MonsterIterPtr->Actor))
+            {
+                Threat += MonsterIterPtr->ThreatLevel;
+                break;
+            }
+        }
+    }
     // DRLA
-    if (CompatMode == COMPAT_DRLA)
+    else if (CompatMode == COMPAT_DRLA)
     {
         str Actor = GetActorClass(0);
         

@@ -2010,7 +2010,7 @@ NamedScript Console bool Summon(SkillLevelInfo *SkillLevel, void *Data)
     }
     else // Monsters
     {
-        if (CompatMode == COMPAT_DRLA)
+        if (CompatMode == COMPAT_DRLA && !ColourfulHell)
             Name = DRLASummons[Index - 1][SkillLevel->CurrentLevel - 1];
         else if (CompatMode == COMPAT_EXTRAS)
             Name = StrParam("DRPG%SExtras", Summons[Index - 1]);

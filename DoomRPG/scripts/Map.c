@@ -891,7 +891,9 @@ NamedScript void HellSkillTransport(int player)
     Delay(35 * 60); // Grace Period
     
     // Build a list of monsters
-    if (DRLA)
+	if (ColourfulHell)
+        MonsterDataAmount = MAX_DEF_MONSTERS_CH;
+    else if (DRLA)
         MonsterDataAmount = MAX_DEF_MONSTERS_DRLA;
     else
         MonsterDataAmount = MAX_DEF_MONSTERS;
@@ -899,7 +901,9 @@ NamedScript void HellSkillTransport(int player)
     for (int i = 0; i < MonsterDataAmount && MonsterListLength < MAX_TEMP_MONSTERS; i++)
     {
         MonsterInfoPtr TempMonster;
-        if (DRLA)
+		if (ColourfulHell)
+            TempMonster = &MonsterDataCH[i];
+        else if (DRLA)
             TempMonster = &MonsterDataDRLA[i];
         else if (CompatMode == COMPAT_LEGENDOOM)
             TempMonster = &MonsterDataLD[i];
@@ -1020,12 +1024,12 @@ bool CheckMapEvent(int Event, LevelInfo *TargetLevel)
             return true;
         
         case MAPEVENT_DRLA_FEEDINGFRENZY:
-            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 20)
+            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 20 || ColourfulHell)
                 return false;
             return true;
         
         case MAPEVENT_DRLA_OVERMIND:
-            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 40)
+            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 40 || ColourfulHell)
                 return false;
             return true;
         
@@ -1050,7 +1054,7 @@ bool CheckMapEvent(int Event, LevelInfo *TargetLevel)
                 return false;
             if (CurrentSkill >= 5)
                 return false;
-            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 10)
+            if (CompatMode != COMPAT_DRLA || AveragePlayerLevel() < 10 || ColourfulHell)
                 return false;
             return true;
         
@@ -1275,7 +1279,10 @@ NamedScript void DecideMapEvent(LevelInfo *TargetLevel, bool FakeIt)
     
     if (TargetLevel->Event == MAPEVENT_MEGABOSS)
     {
-        TargetLevel->MegabossActor = &MegaBosses[Random(0, MAX_MEGABOSSES - 1)];
+		if (ColourfulHell)
+			TargetLevel->MegabossActor = &MegaBossesCH[Random(0, MAX_MEGABOSSES_CH - 1)];
+		else
+			TargetLevel->MegabossActor = &MegaBosses[Random(0, MAX_MEGABOSSES - 1)];
         
         if (GetCVar("drpg_debug"))
             Log("\CdDEBUG: Chosen Boss: \Cg%S", TargetLevel->MegabossActor->Actor);
@@ -1295,7 +1302,12 @@ NamedScript void DecideMapEvent(LevelInfo *TargetLevel, bool FakeIt)
         int MonsterDataAmount;
         fixed MonsterLevelDivisor;
         
-        if (DRLA)
+		if (ColourfulHell)
+		{
+			MonsterDataAmount = MAX_DEF_MONSTERS_CH;
+            MonsterLevelDivisor = 2.5;
+		}
+        else if (DRLA)
         {
             MonsterDataAmount = MAX_DEF_MONSTERS_DRLA;
             MonsterLevelDivisor = 2.5;
@@ -1313,7 +1325,9 @@ NamedScript void DecideMapEvent(LevelInfo *TargetLevel, bool FakeIt)
             int RequiredLevel;
             int AverageLevel = AveragePlayerLevel();
             
-            if (DRLA)
+			if (ColourfulHell)
+				TempMonster = &MonsterDataCH[i];
+            else if (DRLA)
                 TempMonster = &MonsterDataDRLA[i];
             else if (CompatMode == COMPAT_LEGENDOOM)
                 TempMonster = &MonsterDataLD[i];
@@ -1602,7 +1616,10 @@ NamedScript void MegaBossEvent()
     SetMusic(StrParam("MBossA%d", Random(1, 2)));
     
     // Pick Boss
-    CurrentLevel->MegabossActor = &MegaBosses[Random(0, MAX_MEGABOSSES - 1)];
+	if (ColourfulHell)
+		CurrentLevel->MegabossActor = &MegaBossesCH[Random(0, MAX_MEGABOSSES_CH - 1)];
+	else
+		CurrentLevel->MegabossActor = &MegaBosses[Random(0, MAX_MEGABOSSES - 1)];
     
     // Replace them with nothing
     for (int i = 1; i < MonsterID; i++)
@@ -2373,7 +2390,9 @@ NamedScript void HellUnleashedSpawnMonsters()
         
         // Determine a monster
         MonsterInfoPtr Monster;
-        if (CompatMode == COMPAT_DRLA)
+		if (ColourfulHell)
+			Monster = &MonsterDataCH[Random(0, MAX_DEF_MONSTERS_CH - 1)];
+        else if (CompatMode == COMPAT_DRLA)
             Monster = &MonsterDataDRLA[Random(0, MAX_DEF_MONSTERS_DRLA - 1)];
         else if (CompatMode == COMPAT_LEGENDOOM)
             Monster = &MonsterDataLD[Random(0, MAX_DEF_MONSTERS - 1)];
@@ -2565,6 +2584,8 @@ NamedScript void TeleporterCrack(int Source, int Destination)
     if (++SpawnEnemyTimer >= 263 && Random(1, 4096) == 1 && CloseToPlayer)
     {
         TempMonster = "";
+		if (ColourfulHell)
+			TempMonster = "BlackPE2";
         if (DRLA)
             TempMonster = "RLArmageddonPainElemental";
         else

@@ -207,8 +207,6 @@ str DemonNames[NAME_MAX_DEMON_NAMES] =
     "Tarivror",
     "Xibavel",
     "M'Rub", // [marrub] god damn it yholl
-    "P'Noon Ikl", // [marrub] god damn it, yholl
-    "Olok",
 };
 
 str BossSuffixes[NAME_MAX_BOSS_SUFFIXES] =
@@ -535,6 +533,9 @@ str NameColors[NAME_MAX_COLORS] =
 
 str GenerateName(str Actor, str Tag)
 {
+	if (ColourfulHell)
+		return GenerateColourfulHellName(Actor, Tag);
+
     // Humans
     if (CompatMode == COMPAT_DRLA)
     {
@@ -584,6 +585,52 @@ str GenerateName(str Actor, str Tag)
     
     // Monster
     return GenerateMonsterName();
+}
+
+str GenerateColourfulHellName(str Actor, str Tag)
+{
+	//common
+	if (Contains(Actor, "Common"))
+		return StrParam("\Cc%S", Tag);
+	
+	//green
+	if (Contains(Actor, "Green"))
+		return StrParam("\Cq%S", Tag);
+	
+	//blue
+	if (Contains(Actor, "Blue"))
+		return StrParam("\Ch%S", Tag);
+	
+	//purple
+	if (Contains(Actor, "Purple"))
+		return StrParam("\Ct%S", Tag);
+	
+	//yellow
+	if (Contains(Actor, "Yellow"))
+		return StrParam("\Ck%S", Tag);
+	
+	//red
+	if (Contains(Actor, "Red"))
+		return StrParam("\Cg%S", Tag);
+	
+	//black
+	if (Contains(Actor, "Black"))
+		return StrParam("\Cm%S", Tag);
+	
+	//white
+	if (Contains(Actor, "White"))
+		return StrParam("\Cj%S", Tag);
+	
+	//grey
+	if (Contains(Actor, "Gray") || Contains(Actor, "Grey"))
+		return StrParam("\Cu%S", Tag);
+	
+	//fireblu
+	if (Contains(Actor, "Fireblu", true))
+		return StrParam("\Ca%S", Tag);
+	
+	str Color = NameColors[Random(0, NAME_MAX_COLORS - 1)];
+	return StrParam("%S%S", Color, Tag);
 }
 
 str GenerateMonsterName()
