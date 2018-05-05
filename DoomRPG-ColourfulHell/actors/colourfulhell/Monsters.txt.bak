@@ -1,0 +1,3493 @@
+// --------------------------------------------------
+// ZombieMan
+//
+
+// Zombie Spawner
+ACTOR Colourset2RPG : Colourset2 Replaces DRPGZombieMan
+{
+}
+
+// Common Zombie
+ACTOR CommonZombieRPG : CommonZombie Replaces CommonZombie
+{
+	Tag "Former Human"
+
+	States
+	{
+	Spawn:
+		POSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		POSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Zombie
+ACTOR GreenZombieRPG : GreenZombie Replaces GreenZombie
+{
+	Tag "Uncommon Former Human"
+	
+	States
+	{
+	Spawn:
+		POSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		POSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Zombie
+ACTOR BlueZombieRPG : BlueZombie Replaces BlueZombie
+{
+	Tag "Rare Former Human"
+
+	States
+	{
+	Spawn:
+		POSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		POSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Zombie
+ACTOR PurpleZombieRPG : PurpleZombie Replaces PurpleZombie
+{
+	Tag "Epic Former Human"
+
+	States
+	{
+	Spawn:
+		POSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		POSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Zombie
+ACTOR YellowZombieRPG : YellowZombie Replaces YellowZombie
+{
+	Tag "Legendary Former Human"
+
+	States
+	{
+	Spawn:
+		CZOW A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		CZOW A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Zombie
+ACTOR RedZombieRPG : RedZombie Replaces RedZombie
+{
+	Tag "Demonic Former Human"
+
+	States
+	{
+	Spawn:
+		ZUNM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		ZUNM A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Zombie
+ACTOR BlackZombie1RPG : BlackZombie1 Replaces BlackZombie1
+{
+	Tag "Player 9"
+
+	States
+	{
+	Spawn:
+		PLAY A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		PLAY A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Zombie
+ACTOR WhiteZombie1RPG : WhiteZombie1 Replaces WhiteZombie1
+{
+	Tag "The Undertaker"
+
+	States
+	{
+	Spawn:
+		MAGE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		MAGE A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Mr Bones
+
+ACTOR ThePlanBonerRPG : ThePlanBoner Replaces ThePlanBoner
+{
+	Tag "???"
+
+	States
+	{
+	Spawn:
+		BBBN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	//See:
+	//	BBBN A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+	//	Goto Super::See
+	}
+}
+
+ACTOR MrBonesRPG : MrBones Replaces MrBones
+{
+	Tag "Mr. Bones"
+
+	States
+	{
+	Spawn:
+		SKLT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKLT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Shotgunner
+//
+
+// Shotgunner Spawner
+ACTOR Colourset4RPG : Colourset4 Replaces DRPGShotgunGuy
+{
+}
+
+// Common Shotgunner
+ACTOR CommonSGRPG : CommonSG Replaces CommonSG
+{
+	Tag "Former Sergeant"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Shotgunner
+ACTOR GreenSGRPG : GreenSG Replaces GreenSG
+{
+	Tag "Uncommon Former Sergeant"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Shotgunner
+ACTOR BlueSGRPG : BlueSG Replaces BlueSG
+{
+	Tag "Rare Former Sergeant"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Shotgunner
+ACTOR PurpleSGRPG : PurpleSG Replaces PurpleSG
+{
+	Tag "Epic Former Sergeant"
+
+	States
+	{
+	Spawn:
+		HMZP A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HMZP A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Shotgunner
+ACTOR YellowSGRPG : YellowSG Replaces YellowSG
+{
+	Tag "Legendary Former Sergeant"
+
+	States
+	{
+	Spawn:
+		ASGZ A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		ASGZ A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Shotgunner
+ACTOR RedSGRPG : RedSG Replaces RedSG
+{
+	Tag "Demonic Former Sergeant"
+
+	States
+	{
+	Spawn:
+		GPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		GPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Shotgunner
+ACTOR BlackSG3RPG : BlackSG3 Replaces BlackSG3
+{
+	Tag "Shotgun Crew Commander"
+
+	States
+	{
+	Spawn:
+		ZSP1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		ZSP1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Black Shotgunner 2
+ACTOR BlackSG2RPG : BlackSG2 Replaces BlackSG2
+{
+	Tag "Shotgun Crew Trooper"
+
+	States
+	{
+	Spawn:
+		ZSP1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		ZSP1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// White Shotgunner
+ACTOR WhiteSG2RPG : WhiteSG2 Replaces WhiteSG2
+{
+	Tag "Benellus, God of Shotguns"
+
+	States
+	{
+	Spawn:
+		BENE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BENE A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Shotgunner
+ACTOR FireBluSG2RPG : FireBluSG2 Replaces FireBluSG2
+{
+	Tag "Flame Sergeant"
+
+	States
+	{
+	Spawn:
+		GPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		GPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Chaingunner
+//
+
+// Chaingunner Spawner
+ACTOR Colourset12RPG : Colourset12 Replaces DRPGChaingunGuy
+{
+}
+
+// Common Chaingunner
+ACTOR CommonCguyRPG : CommonCguy Replaces CommonCguy
+{
+	Tag "Former Commando"
+
+	States
+	{
+	Spawn:
+		CPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		CPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Chaingunner
+ACTOR GreenCguyRPG : GreenCguy Replaces GreenCguy
+{
+	Tag "Uncommon Former Commando"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Chaingunner
+ACTOR BlueCguyRPG : BlueCguy Replaces BlueCguy
+{
+	Tag "Rare Former Commando"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Chaingunner
+ACTOR PurpleCguyRPG : PurpleCguy Replaces PurpleCguy
+{
+	Tag "Epic Former Commando"
+
+	States
+	{
+	Spawn:
+		SPOS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SPOS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Chaingunner
+ACTOR YellowCguyRPG : YellowCguy Replaces YellowCguy
+{
+	Tag "Legendary Former Commando"
+
+	States
+	{
+	Spawn:
+		PZOW A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PZOW A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Chaingunner
+ACTOR RedCguyRPG : RedCguy Replaces RedCguy
+{
+	Tag "Demonic Former Commando"
+
+	States
+	{
+	Spawn:
+		CPS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		CPS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Chaingunner
+ACTOR BlackCguy2RPG : BlackCguy2 Replaces BlackCguy2
+{
+	Tag "Mr. General"
+
+	States
+	{
+	Spawn:
+		BFGZ A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BFGZ A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Chaingunner
+ACTOR WhiteCguy2RPG : WhiteCguy2 Replaces WhiteCguy2
+{
+	Tag "Crazy Lady Scientist"
+
+	States
+	{
+	Spawn:
+		FSZS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		FSZS A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Slimy Worm
+ACTOR SlimyWormRPG : SlimyWorm Replaces SlimyWorm
+{
+	Tag "Slimy Worm"
+
+	States
+	{
+	Spawn:
+		WORM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		WORM A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Volatile Caco
+ACTOR VolativeCacoRPG : VolativeCaco Replaces VolativeCaco
+{
+	Tag "Unstable Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Spliced Baron
+ACTOR SpliceBaronRPG : SpliceBaron Replaces SpliceBaron
+{
+	Tag "Spliced Baron"
+
+	States
+	{
+	Spawn:
+		ARBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		ARBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Baby Caco
+ACTOR BabyCacoRPG : BabyCaco Replaces BabyCaco
+{
+	Tag "Baby Cacodemon"
+
+	States
+	{
+	Spawn:
+		CACB A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		CACB A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Gray Chaingunner
+ACTOR GrayCguy2RPG : GrayCguy2 Replaces GrayCguy2
+{
+	Tag "Gray Former Commando"
+
+	States
+	{
+	Spawn:
+		PZOW A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PZOW A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Fireblu Chaingunner
+ACTOR FireBluCguy2RPG : FireBluCguy2 Replaces FireBluCguy2
+{
+	Tag "Flame Commando"
+
+	States
+	{
+	Spawn:
+		PZOW A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PZOW A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Imp
+//
+
+// Imp Spawner
+ACTOR Colourset3RPG : Colourset3 Replaces DRPGDoomImp
+{
+}
+
+// Common Imp
+ACTOR CommonImpRPG : CommonImp Replaces CommonImp
+{
+	Tag "Imp"
+
+	States
+	{
+	Spawn:
+		TROO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TROO A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Imp
+ACTOR GreenImpRPG : GreenImp Replaces GreenImp
+{
+	Tag "Uncommon Imp"
+
+	States
+	{
+	Spawn:
+		TROO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TROO A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Imp
+ACTOR BlueImpRPG : BlueImp Replaces BlueImp
+{
+	Tag "Rare Imp"
+
+	States
+	{
+	Spawn:
+		TROO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TROO A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Imp
+ACTOR PurpleImpRPG : PurpleImp Replaces PurpleImp
+{
+	Tag "Epic Imp"
+
+	States
+	{
+	Spawn:
+		TROO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TROO A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Imp
+ACTOR YellowImpRPG : YellowImp Replaces YellowImp
+{
+	Tag "Legendary Imp"
+
+	States
+	{
+	Spawn:
+		TRO4 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TRO4 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Imp
+ACTOR RedImpRPG : RedImp Replaces RedImp
+{
+	Tag "Demonic Imp"
+
+	States
+	{
+	Spawn:
+		PRIM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PRIM A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Imp
+ACTOR BlackImp1RPG : BlackImp1 Replaces BlackImp1
+{
+	Tag "Smoking Black Imp"
+
+	States
+	{
+	Spawn:
+		AGUR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		AGUR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Imp
+ACTOR WhiteImp2RPG : WhiteImp2 Replaces WhiteImp2
+{
+	Tag "Imp Master"
+
+	States
+	{
+	Spawn:
+		HELN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		HELN A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Gray Imp
+ACTOR GrayImp2RPG : GrayImp2 Replaces GrayImp2
+{
+	Tag "Stoned Imp"
+
+	States
+	{
+	Spawn:
+		PRIM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PRIM A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Demon
+//
+
+// Demon Spawner
+ACTOR Colourset5RPG : Colourset5 Replaces DRPGDemon
+{
+}
+
+// Common Demon
+ACTOR CommonDemonRPG : CommonDemon Replaces CommonDemon
+{
+	Tag "Demon"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Demon
+ACTOR GreenDemonRPG : GreenDemon Replaces GreenDemon
+{
+	Tag "Uncommon Demon"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Demon
+ACTOR BlueDemonRPG : BlueDemon Replaces BlueDemon
+{
+	Tag "Rare Demon"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Demon
+ACTOR PurpleDemonRPG : PurpleDemon Replaces PurpleDemon
+{
+	Tag "Epic Demon"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Demon
+ACTOR YellowDemonRPG : YellowDemon Replaces YellowDemon
+{
+	Tag "Legendary Demon"
+
+	States
+	{
+	Spawn:
+		SRG2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SRG2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Demon
+ACTOR RedDemonRPG : RedDemon Replaces RedDemon
+{
+	Tag "Demonic Demon"
+
+	States
+	{
+	Spawn:
+		SRG2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SRG2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Demon
+ACTOR BlackDemon3RPG : BlackDemon3 Replaces BlackDemon3
+{
+	Tag "The Butcher"
+
+	States
+	{
+	Spawn:
+		BCHR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BCHR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Butcher's Hounds
+ACTOR WHOLETTHEDOGSOUTRPG : WHOLETTHEDOGSOUT Replaces WHOLETTHEDOGSOUT
+{
+	Tag "Butcher's Hound"
+
+	States
+	{
+	Spawn:
+		HDOG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		HDOG A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// White Demon
+ACTOR WhiteDemon2RPG : WhiteDemon2 Replaces WhiteDemon2
+{
+	Tag "The Juggernaut"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Gray Demon
+ACTOR GreyDemon2RPG : GreyDemon2 Replaces GreyDemon2
+{
+	Tag "Demon Worm"
+
+	States
+	{
+	Spawn:
+		WORM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	//See:
+	//	WORM A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+	//	Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Spectre
+//
+
+// Spectre Spawner
+ACTOR Colourset6RPG : Colourset6 Replaces DRPGSpectre
+{
+}
+
+// Common Spectre
+ACTOR CommonSpectreRPG : CommonSpectre Replaces CommonSpectre
+{
+	Tag "Spectre"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Spectre
+ACTOR GreenSpectreRPG : GreenSpectre Replaces GreenSpectre
+{
+	Tag "Uncommon Spectre"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Spectre
+ACTOR BlueSpectreRPG : BlueSpectre Replaces BlueSpectre
+{
+	Tag "Rare Spectre"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Spectre
+ACTOR PurpleSpectreRPG : PurpleSpectre Replaces PurpleSpectre
+{
+	Tag "Spectre"
+
+	States
+	{
+	Spawn:
+		SARG A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SARG A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Spectre
+ACTOR YellowSpectreRPG : YellowSpectre Replaces YellowSpectre
+{
+	Tag "Legendary Spectre"
+
+	States
+	{
+	Spawn:
+		SRG2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SRG2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Spectre
+ACTOR RedSpectreRPG : RedSpectre Replaces RedSpectre
+{
+	Tag "Demonic Spectre"
+
+	States
+	{
+	Spawn:
+		SRG2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SRG2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Spectre
+ACTOR BlackSpectre2RPG : BlackSpectre2 Replaces BlackSpectre2
+{
+	Tag "The Rogue"
+
+	States
+	{
+	Spawn:
+		SHDW A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SHDW A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Spectre
+ACTOR WhiteSpectre2RPG : WhiteSpectre2 Replaces WhiteSpectre2
+{
+	Tag "???"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		TNT1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR WakawakaRPG : Wakawaka Replaces Wakawaka
+{
+	Tag "Worm"
+
+	States
+	{
+	Spawn:
+		EWRM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		EWRM A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Gray Spectre
+ACTOR GraySpectre2RPG : GraySpectre2 Replaces GraySpectre2
+{
+	Tag "Gray Spectre"
+
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Cacodemon
+//
+
+// Cacodemon Spawner
+ACTOR Colourset7RPG : Colourset7 Replaces DRPGCacodemon
+{
+}
+
+// Common Cacodemon
+ACTOR CommonCacoRPG : CommonCaco Replaces CommonCaco
+{
+	Tag "Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Cacodemon
+ACTOR GreenCacoRPG : GreenCaco Replaces GreenCaco
+{
+	Tag "Uncommon Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Cacodemon
+ACTOR BlueCacoRPG : BlueCaco Replaces BlueCaco
+{
+	Tag "Rare Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Cacodemon
+ACTOR PurpleCacoRPG : PurpleCaco Replaces PurpleCaco
+{
+	Tag "Epic Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Cacodemon
+ACTOR YellowCacoRPG : YellowCaco Replaces YellowCaco
+{
+	Tag "Cacolich"
+
+	States
+	{
+	Spawn:
+		CALI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		CALI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Cacodemon
+ACTOR RedCacoRPG : RedCaco Replaces RedCaco
+{
+	Tag "Demonic Cacodemon"
+
+	States
+	{
+	Spawn:
+		HED9 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HED9 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Cacodemon
+ACTOR BlackCaco2RPG : BlackCaco2 Replaces BlackCaco2
+{
+	Tag "Shockmaster"
+
+	States
+	{
+	Spawn:
+		HELE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		HELE A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Cacodemon
+ACTOR WhiteCaco2RPG : WhiteCaco2 Replaces WhiteCaco2
+{
+	Tag "White Cacodemon"
+
+	States
+	{
+	Spawn:
+		HELE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CACP A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR WhiteCacoREALRPG : WhiteCacoREAL Replaces WhiteCacoREAL
+{
+	Tag "Thy Flesh Consumer"
+
+	States
+	{
+	Spawn:
+		CDW2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CDW2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR BloodRainerCacoRPG : BloodRainerCaco Replaces BloodRainerCaco
+{
+	Tag "Blood Rainer"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		CDW2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+	//	Goto Super::See
+	}
+}
+
+ACTOR WhiteCacoOrb1RPG : WhiteCacoOrb1 Replaces WhiteCacoOrb1
+{
+	Tag "Orb of Doom"
+
+	States
+	{
+	Spawn:
+		CDW2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		TNT1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Cacodemon
+ACTOR FireBluCaco2RPG : FireBluCaco2 Replaces FireBluCaco2
+{
+	Tag "One Ugly Tomato"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Gray Cacodemon
+ACTOR GrayCacoRPG : GrayCaco Replaces GrayCaco
+{
+	Tag "Stone Cold Cacodemon"
+
+	States
+	{
+	Spawn:
+		HEAD A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HEAD A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Hell Knight
+//
+
+// Hell Knight Spawner
+ACTOR Colourset8RPG : Colourset8 Replaces DRPGHellKnight
+{
+}
+
+// Common Hell Knight
+ACTOR CommonHKRPG : CommonHK Replaces CommonHK
+{
+	Tag "Hell Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Hell Knight
+ACTOR GreenHKRPG : GreenHK Replaces GreenHK
+{
+	Tag "Uncommon Hell Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Hell Knight
+ACTOR BlueHKRPG : BlueHK Replaces BlueHK
+{
+	Tag "Rare Hell Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Hell Knight
+ACTOR PurpleHKRPG : PurpleHK Replaces PurpleHK
+{
+	Tag "Epic Hell Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Hell Knight
+ACTOR YellowHKRPG : YellowHK Replaces YellowHK
+{
+	Tag "Bruiser"
+
+	States
+	{
+	Spawn:
+		BRUS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BRUS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Hell Knight
+ACTOR RedHKRPG : RedHK Replaces RedHK
+{
+	Tag "Hell Knightmare"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BRUR A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR SpecialImpRPG : SpecialImp Replaces SpecialImp
+{
+	Tag "Blue Imp Imago"
+
+	States
+	{
+	Spawn:
+		TROO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		TROO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See+1
+	}
+}
+
+// Black Hell Knight
+ACTOR BlackHK2RPG : BlackHK2 Replaces BlackHK2
+{
+	Tag "The Terminator"
+
+	States
+	{
+	Spawn:
+		BRUC A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BRUC A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Hell Knight
+ACTOR WhiteHK3RPG : WhiteHK3 Replaces WhiteHK3
+{
+	Tag "Ghost of 1993"
+
+	States
+	{
+	Spawn:
+		PHAN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		PHAN A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR MiniPhantomRPG : MiniPhantom Replaces MiniPhantom
+{
+	Tag "Mini Phantom"
+
+	States
+	{
+	Spawn:
+		SPI1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SPI1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Hell Knight
+ACTOR FireBluHK2RPG : FireBluHK2 Replaces FireBluHK2
+{
+	Tag "Clown Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Gray Hell Knight
+ACTOR GrayHK2RPG : GrayHK2 Replaces GrayHK2
+{
+	Tag "Gray Knight"
+
+	States
+	{
+	Spawn:
+		BOS2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Baron of Hell
+//
+
+// Baron of Hell Spawner
+ACTOR Colourset13RPG : Colourset13 Replaces DRPGBaronOfHell
+{
+}
+
+// Common Baron
+ACTOR CommonBaronRPG : CommonBaron Replaces CommonBaron
+{
+	Tag "Baron of Hell"
+
+	States
+	{
+	Spawn:
+		BOSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Baron
+ACTOR GreenBaronRPG : GreenBaron Replaces GreenBaron
+{
+	Tag "Uncommon Baron of Hell"
+
+	States
+	{
+	Spawn:
+		BOSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Baron
+ACTOR BlueBaronRPG : BlueBaron Replaces BlueBaron
+{
+	Tag "Rare Baron of Hell"
+
+	States
+	{
+	Spawn:
+		BOSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Baron
+ACTOR PurpleBaronRPG : PurpleBaron Replaces PurpleBaron
+{
+	Tag "Epic Baron of Hell"
+
+	States
+	{
+	Spawn:
+		BOSS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOSS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Baron
+ACTOR YellowBaronRPG : YellowBaron Replaces YellowBaron
+{
+	Tag "Grand Baron of Hell"
+
+	States
+	{
+	Spawn:
+		LOHS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		LOHS A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Baron
+ACTOR RedBaron1RPG : RedBaron1 Replaces RedBaron1
+{
+	Tag "Raging Red Baron"
+
+	States
+	{
+	Spawn:
+		BOS4 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS4 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR RedBaron3RPG : RedBaron3 Replaces RedBaron3
+{
+	Tag "Powerful Red Baron"
+
+	States
+	{
+	Spawn:
+		BOS4 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS4 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR RedBaron2RPG : RedBaron2 Replaces RedBaron2
+{
+	Tag "Flying Red Baron"
+
+	States
+	{
+	Spawn:
+		FALN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FALN A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Baron
+ACTOR BlackBaron2RPG : BlackBaron2 Replaces BlackBaron2
+{
+	Tag "Baron of the Abyss"
+
+	States
+	{
+	Spawn:
+		CUTH A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CUTH A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR DeepTentacleRPG : DeepTentacle Replaces DeepTentacle
+{
+	Tag "Deep Tentacle"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		TEN1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+ACTOR RoseTentacleRPG : RoseTentacle Replaces RoseTentacle
+{
+	Tag "Rose Tentacle"
+
+	States
+	{
+	Spawn:
+		ROSX A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		ROSX A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Gray Baron
+ACTOR GrayBaron2RPG : GrayBaron2 Replaces GrayBaron2
+{
+	Tag "A Statue?"
+
+	States
+	{
+	Spawn:
+		BOS4 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS4 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Fireblu Baron
+ACTOR FireBluBaron2RPG : FireBluBaron2 Replaces FireBluBaron2
+{
+	Tag "FireBlu Baron of Hell"
+
+	States
+	{
+	Spawn:
+		BOS4 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BOS4 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Lost Soul
+//
+
+// Lost Soul Spawner
+ACTOR Colourset14RPG : Colourset14 Replaces DRPGLostSoul
+{
+}
+
+// Common Lost Soul
+ACTOR CommonLSoulRPG : CommonLSoul Replaces CommonLSoul
+{
+	Tag "Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		TNT1 A 0
+		Goto Super::See
+	}
+}
+
+// Green Lost Soul
+ACTOR GreenLSoulRPG : GreenLSoul Replaces GreenLSoul
+{
+	Tag "Uncommon Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Blue Lost Soul
+ACTOR BlueLSoulRPG : BlueLSoul Replaces BlueLSoul
+{
+	Tag "Rare Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Purple Lost Soul
+ACTOR PurpleLSoulRPG : PurpleLSoul Replaces PurpleLSoul
+{
+	Tag "Epic Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Yellow Lost Soul
+ACTOR YellowLSoulRPG : YellowLSoul Replaces YellowLSoul
+{
+	Tag "Legendary Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		FRGO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		FRGO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Red Lost Soul
+ACTOR RedLSoulRPG : RedLSoul Replaces RedLSoul
+{
+	Tag "Bloody Lost Soul"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		FRGO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		FRGO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Black Lost Soul
+ACTOR BlackLSoul3RPG : BlackLSoul3 Replaces BlackLSoul3
+{
+	Tag "Queen Bee"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		WASP A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn
+	See:
+		WASP A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR BlackLSoul2RPG : BlackLSoul2 Replaces BlackLSoul2
+{
+	Tag "Bee"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		WASP A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		WASP A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// White Lost Soul
+ACTOR WhiteLSoul2RPG : WhiteLSoul2 Replaces WhiteLSoul2
+{
+	Tag "The Shifter"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		ETHS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn
+	See:
+		ETHS A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR HKEggRPG : HKEgg Replaces HKEgg
+{
+	Tag "Egg"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		BAL1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		BAL1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+ACTOR RevEggRPG : HKEgg Replaces HKEgg
+{
+	Tag "Egg"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		BAL1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		BAL1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Gray Lost Soul
+ACTOR GrayLSoul2RPG : GrayLSoul2 Replaces GrayLSoul2
+{
+	Tag "Hive"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		BAL1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Lost Soul
+ACTOR FireBluLSoul2RPG : FireBluLSoul2 Replaces FireBluLSoul2
+{
+	Tag "Charred Skull"
+	
+	-COUNTKILL
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Pain Elemental
+//
+
+// Pain Elemental Spawner
+ACTOR Colourset15RPG : Colourset15 Replaces DRPGPainElemental
+{
+}
+
+// Common Pain Elemental
+ACTOR CommonPERPG : CommonPE Replaces CommonPE
+{
+	Tag "Pain Elemental"
+
+	States
+	{
+	Spawn:
+		PAIN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PAIN A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	Missile:
+		PAIN D 5 A_FaceTarget
+		PAIN E 5 A_FaceTarget
+		PAIN F 4 Bright A_FaceTarget
+		PAIN F 1 Bright A_PainAttack("PECommonLsoulRPG")
+		Goto See
+	}
+}
+
+// Green Pain Elemental
+ACTOR GreenPERPG : GreenPE Replaces GreenPE
+{
+	Tag "Uncommon Pain Elemental"
+
+	States
+	{
+	Spawn:
+		PAIN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PAIN A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	SoulIt:
+		PAIN F 4 Bright A_FaceTarget
+		PAIN F 1 Bright A_PainAttack("PEGreenLSoulRPG")
+		Goto See
+	}
+}
+
+// Blue Pain Elemental
+ACTOR BluePERPG : BluePE Replaces BluePE
+{
+	Tag "Rare Pain Elemental"
+
+	States
+	{
+	Spawn:
+		PAIN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PAIN A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	SoulIt:
+		PAIN F 4 Bright A_FaceTarget
+		PAIN F 1 Bright A_PainAttack("PEBlueLSoulRPG")
+		PAIN EDE 8
+		PAIN F 3 Bright A_PainAttack("PEBlueLSoulRPG",0, PAF_NOSKULLATTACK)
+		Goto See
+	}
+}
+
+// Purple Pain Elemental
+ACTOR PurplePERPG : PurplePE Replaces PurplePE
+{
+	Tag "Epic Pain Elemental"
+
+	States
+	{
+	Spawn:
+		TORT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TORT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	SoulIt:
+		TORT F 0
+		TORT F 0 A_Jumpif(user_slowdownbuddy>6, "Maaybe")
+		TORT F 7 Bright A_DualPainAttack("PEPurpleLSoulRPG")
+		TORT D 6
+		TORT D 0 A_SetUserVar("user_slowdownbuddy",user_slowdownbuddy+1)
+		TORT D 0
+		Goto See
+	}
+}
+
+// Yellow Pain Elemental
+ACTOR YellowPERPG : YellowPE Replaces YellowPE
+{
+	Tag "Volcanic Pain Elemental"
+
+	States
+	{
+	Spawn:
+		INFR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		INFR A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	Spawns2:
+		INFR BC 5
+		INFR D 5 A_PainAttack("PEYellowLSoulRPG")
+		INFR D 0 A_CheckSight("See")
+		Goto Missile
+	}
+}
+
+// Red Pain Elemental
+ACTOR RedPERPG : RedPE Replaces RedPE
+{
+	Tag "Rage Elemental"
+
+	States
+	{
+	Spawn:
+		TORT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		TORT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	SoulIt:
+		TORT C 9 Bright A_PainAttack("PERedLSoulRPG")
+		TORT D 5
+		Goto See
+	}
+}
+
+// Black Pain Elemental
+ACTOR BlackPE2RPG : BlackPE2 Replaces BlackPE2
+{
+	Tag "Hell Soul Elemental"
+
+	States
+	{
+	Spawn:
+		OVER A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		OVER A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR BundleRandom3RPG : RandomSpawner Replaces BundleRandom3
+{
+    DropItem "PECommonLSoulRPG", 255, 150
+    DropItem "PEGreenLSoulRPG", 255, 125
+    DropItem "PEBlueLSoulRPG", 255,  100
+    DropItem "PEPurpleLSoulRPG", 255, 75
+	DropItem "PEYellowLSoulRPG", 255, 50
+	DropItem "PERedLSoulRPG", 255, 50
+}
+
+ACTOR BEESHOTRPG : BEESHOT Replaces BEESHOT
+{
+	States
+	{
+	Death:
+		LFX1 SS 2 Bright A_SpawnItemEx("PEBlackLSoul2RPG",random(-12,12),random(-12,12),random(-12,12),0,0,0,0,SXF_SetMaster)
+		stop
+	}
+}
+
+// White Pain Elemental
+ACTOR WhitePE2RPG : WhitePE2 Replaces WhitePE2
+{
+	Tag "The Watcher"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		WATC A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR WhitePE3RPG : WhitePE3 Replaces WhitePE3
+{
+	Tag "The Pilot"
+
+	States
+	{
+	Spawn:
+		WATC A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		WATC A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR HealthFountainWhitePERPG : HealthFountainWhitePE Replaces HealthFountainWhitePE
+{
+	Tag "Health Fountain"
+
+	States
+	{
+	Spawn:
+		WATC A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		WATC A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Mini Sentinel
+ACTOR MiniSentinelPERPG : MiniSentinelPE Replaces MiniSentinelPE
+{
+	Tag "Mini Sentinel"
+
+	States
+	{
+	Spawn:
+		MNDR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	//See:
+	//	MNDR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+	//	Goto Super::See
+	}
+}
+
+// Gray Pain Elemental
+ACTOR GrayPE2RPG : GrayPE2 Replaces GrayPE2
+{
+	Tag "Nasty Hive"
+
+	States
+	{
+	Spawn:
+		INFR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		INFR A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	SoulIt:
+		INFR C 4 Bright A_SpawnItemEx("PEGrayLSoul2RPG",random(-128,128),random(-128,128),0,0,0,0,0,SXF_TRANSFERPOINTERS ) 
+		INFR D 5
+		Goto See
+	Bug1:
+		INFR C 4 A_PainAttack("PEGreyDemon2RPG")
+		INFR D 5
+		Goto See
+	Bug2:
+		INFR C 4 A_SpawnItemEx("PEGraySpectre2RPG",random(-64,64),random(-64,64),0,0,0,0,0,SXF_TRANSFERPOINTERS ) 
+		INFR D 5
+		Goto See
+	}
+}
+
+// Fireblu Pain Elemental
+ACTOR FireBluPE2RPG : FireBluPE2 Replaces FireBluPE2
+{
+	Tag "FireBlu Elemental"
+
+	States
+	{
+	Spawn:
+		PAIN A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		PAIN A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR BoomPEBluRPG : BoomPEBlu Replaces BoomPEBlu
+{
+	States
+	{
+	Death:
+		MISL CD 4 Bright a_explode(random(20,40),64,0)
+		TNT1 A 0 A_SpawnItemEx ("FireBluLSoul2", 0,0,6, VelX,VelY,VelZ, 0, SXF_ABSOLUTEMOMENTUM | SXF_NOCHECKPOSITION,128)
+		Stop
+	}
+}
+
+
+// --------------------------------------------------
+// Pain Elemental Lost Souls
+//
+
+// Common Lost Soul
+ACTOR PECommonLSoulRPG : CommonLSoulRPG
+{
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See+1
+	}
+}
+
+// Green Lost Soul
+ACTOR PEGreenLSoulRPG : GreenLSoulRPG
+{
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Blue Lost Soul
+ACTOR PEBlueLSoulRPG : BlueLSoulRPG
+{
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Purple Lost Soul
+ACTOR PEPurpleLSoulRPG : PurpleLSoulRPG
+{
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Yellow Lost Soul
+ACTOR PEYellowLSoulRPG : YellowLSoulRPG
+{
+	States
+	{
+	Spawn:
+		FRGO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		FRGO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Red Lost Soul
+ACTOR PERedLSoulRPG : RedLSoulRPG
+{
+	States
+	{
+	Spawn:
+		FRGO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		FRGO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Black Lost Soul
+ACTOR PEBlackLSoul3RPG : BlackLSoul3RPG
+{
+	States
+	{
+	Spawn:
+		WASP A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		WASP A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+ACTOR PEBlackLSoul2RPG : BlackLSoul2RPG
+{
+	States
+	{
+	Spawn:
+		WASP A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn+1
+	See:
+		WASP A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Lost Soul
+ACTOR PEWhiteLSoul2RPG : WhiteLSoul2RPG
+{
+	States
+	{
+	Spawn:
+		ETHS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn+1
+	See:
+		ETHS A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Gray Lost Soul
+ACTOR PEGrayLSoul2RPG : GrayLSoul2RPG
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		BAL1 A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Gray Demon
+ACTOR PEGreyDemon2RPG : GreyDemon2RPG
+{
+	States
+	{
+	Spawn:
+		WORM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	//See:
+	//	WORM A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+	//	Goto Super::See
+	}
+}
+
+// Gray Spectre
+ACTOR PEGraySpectre2RPG : GraySpectre2RPG
+{
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Lost Soul
+ACTOR PEFireBluLSoul2RPG : FireBluLSoul2RPG
+{
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Revenant
+//
+
+// Revenant Spawner
+ACTOR Colourset1RPG : Colourset1 Replaces DRPGRevenant
+{
+}
+
+// Common Revenant
+ACTOR CommonRevenantRPG : CommonRevenant Replaces CommonRevenant
+{
+	Tag "Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Revenant
+ACTOR GreenRevenantRPG : GreenRevenant Replaces GreenRevenant
+{
+	Tag "Uncommon Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Revenant
+ACTOR BlueRevenantRPG : BlueRevenant Replaces BlueRevenant
+{
+	Tag "Rare Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Revenant
+ACTOR PurpleRevenantRPG : PurpleRevenant Replaces PurpleRevenant
+{
+	Tag "Epic Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Revenant
+ACTOR YellowRevenantRPG : YellowRevenant Replaces YellowRevenant
+{
+	Tag "Ghostly Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR SpecialSoulRPG : SpecialSoul Replaces SpecialSoul
+{
+	Tag "Soul"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SKUL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Red Revenant
+ACTOR RedRevenantRPG : RedRevenant Replaces RedRevenant
+{
+	Tag "Bloody Revenant"
+
+	States
+	{
+	Spawn:
+		RASK A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		RASK A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Revenant
+ACTOR BlackRevenant3RPG : BlackRevenant3 Replaces BlackRevenant3
+{
+	Tag "The Black Knight"
+
+	States
+	{
+	Spawn:
+		DKNT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		DKNT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR BlackRev2RPG : BlackRev2 Replaces BlackRev2
+{
+	Tag "The Black Knight"
+
+	States
+	{
+	Spawn:
+		DKNT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		DKNT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Revenant
+ACTOR FireBLURevenant2RPG : FireBLURevenant2 Replaces FireBLURevenant2
+{
+	Tag "Flaming Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Gray Revenant
+ACTOR GrayRevenant2RPG : GrayRevenant2 Replaces GrayRevenant2
+{
+	Tag "Boxing Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Mancubus
+//
+
+// Mancubus Spawner
+ACTOR Colourset10RPG : Colourset10 Replaces DRPGFatso
+{
+}
+
+// Common Mancubus
+ACTOR CommonFatsoRPG : CommonFatso Replaces CommonFatso
+{
+	Tag "Mancubus"
+
+	States
+	{
+	Spawn:
+		FATT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FATT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Mancubus
+ACTOR GreenFatsoRPG : GreenFatso Replaces GreenFatso
+{
+	Tag "Uncommon Mancubus"
+
+	States
+	{
+	Spawn:
+		FATT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FATT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Mancubus
+ACTOR BlueFatsoRPG : BlueFatso Replaces BlueFatso
+{
+	Tag "Rare Mancubus"
+
+	States
+	{
+	Spawn:
+		FATT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FATT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Mancubus
+ACTOR PurpleFatsoRPG : PurpleFatso Replaces PurpleFatso
+{
+	Tag "Epic Mancubus"
+
+	States
+	{
+	Spawn:
+		FATT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FATT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Mancubus
+ACTOR YellowFatsoRPG : YellowFatso Replaces YellowFatso
+{
+	Tag "Legendary Mancubus"
+
+	States
+	{
+	Spawn:
+		INCB A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		INCB A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Mancubus
+ACTOR RedFatsoRPG : RedFatso Replaces RedFatso
+{
+	Tag "Horned Beast"
+
+	States
+	{
+	Spawn:
+		HBST A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HBST A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Mancubus
+ACTOR BlackFatso2RPG : BlackFatso2 Replaces BlackFatso2
+{
+	Tag "Dark Beast"
+
+	States
+	{
+	Spawn:
+		BDEM A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BDEM A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Fireblu Mancubus
+ACTOR FireBluFatso2RPG : FireBluFatso2 Replaces FireBluFatso2
+{
+	Tag "Mancublu"
+
+	States
+	{
+	Spawn:
+		HBST A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		HBST A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Gray Mancubus
+ACTOR GrayFatso2RPG : GrayFatso2 Replaces GrayFatso2
+{
+	Tag "Gray Mancubus"
+
+	States
+	{
+	Spawn:
+		FATT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		FATT A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Arachnotron
+//
+
+// Arachnotron Spawner
+ACTOR Colourset9RPG : Colourset9 Replaces DRPGArachnotron
+{
+}
+
+// Common Arachnotron
+ACTOR CommonSP1RPG : CommonSP1 Replaces CommonSP1
+{
+	Tag "Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Arachnotron
+ACTOR GreenSP1RPG : GreenSP1 Replaces GreenSP1
+{
+	Tag "Uncommon Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Arachnotron
+ACTOR BlueSP1RPG : BlueSP1 Replaces BlueSP1
+{
+	Tag "Rare Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Arachnotron
+ACTOR PurpleSP1RPG : PurpleSP1 Replaces PurpleSP1
+{
+	Tag "Epic Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Yellow Arachnotron
+ACTOR YellowSP1RPG : YellowSP1 Replaces YellowSP1
+{
+	Tag "Brainchotron"
+
+	States
+	{
+	Spawn:
+		ACNB A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		ACNB A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Arachnotron
+ACTOR RedSP1RPG : RedSP1 Replaces RedSP1
+{
+	Tag "Raging Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSP2 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSP2 A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Arachnotron
+ACTOR BlackSP2RPG : BlackSP2 Replaces BlackSP2
+{
+	Tag "Explosive Arachnotron"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Arachnotron
+ACTOR WhiteSP11RPG : WhiteSP11 Replaces WhiteSP11
+{
+	Tag "White Spider"
+
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR WhiteSP3RPG : WhiteSP3 Replaces WhiteSP3
+{
+	Tag "White Spider"
+
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR WhiteSP2RPG : WhiteSP2 Replaces WhiteSP2
+{
+	Tag "White Spider"
+
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR MiniSP1RPG : MiniSP1 Replaces MiniSP1
+{
+	Tag "White Spider"
+
+	States
+	{
+	Spawn:
+		TRIT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::Spawn
+	See:
+		TRIT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS | MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Gray Arachnotron
+ACTOR GraySP2RPG : GraySP2 Replaces GraySP2
+{
+	Tag "Metal Spider"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Archvile
+//
+
+// Archvile Spawner
+ACTOR Colourset11RPG : Colourset11 Replaces DRPGArchvile
+{
+}
+
+// Common Archvile
+ACTOR CommonArchRPG : CommonArch Replaces CommonArch
+{
+	Tag "Archvile"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Green Archvile
+ACTOR GreenArchRPG : GreenArch Replaces GreenArch
+{
+	Tag "Uncommon Archvile"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Blue Archvile
+ACTOR BlueArchRPG : BlueArch Replaces BlueArch
+{
+	Tag "Rare Archvile"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Purple Archvile
+ACTOR PurpleArchRPG : PurpleArch Replaces PurpleArch
+{
+	Tag "Epic Archvile"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR SpecialRevRPG : SpecialRev Replaces SpecialRev
+{
+	Tag "Agitated Revenant"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See+1
+	}
+}
+
+// Yellow Archvile
+ACTOR YellowArchRPG : YellowArch Replaces YellowArch
+{
+	Tag "Golden Archvile"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+ACTOR SpecialVileRPG : SpecialVile Replaces SpecialVile
+{
+	Tag "ArchArchvile"
+
+	States
+	{
+	Spawn:
+		SKEL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		SKEL A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See+1
+	}
+}
+
+// Red Archvile
+ACTOR RedArch2RPG : RedArch2 Replaces RedArch2
+{
+	Tag "Infernovile"
+
+	States
+	{
+	Spawn:
+		DIAB A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		DIAB A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Red Archvile
+ACTOR RedArch3RPG : RedArch3 Replaces RedArch3
+{
+	Tag "Grand Infernovile"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		DIAB A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Black Archvile
+ACTOR BlackVileRPG : BlackVile Replaces BlackVile
+{
+	Tag "The Void"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// White Archvile
+ACTOR WhitevileRPG : Whitevile Replaces Whitevile
+{
+	Tag "Godly Archvile"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		LMWZ A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Gray Archvile
+ACTOR GrayArch2RPG : GrayArch2 Replaces GrayArch2
+{
+	Tag "Stone Archvile"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// Fireblu Archvile
+ACTOR FireBluArch2RPG : FireBluArch2 Replaces FireBluArch2
+{
+	Tag "FireBlu Archvile"
+
+	States
+	{
+	Spawn:
+		VILE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::Spawn
+	See:
+		VILE A 0 ACS_NamedExecuteAlways("MonsterInit", 0)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Cyberdemon
+//
+
+// Cyberdemon Spawner
+ACTOR Colourset16RPG : Colourset16 Replaces DRPGCyberdemon
+{
+}
+
+// Common Cyberdemon
+ACTOR CommonCybieRPG : CommonCybie Replaces CommonCybie
+{
+	Tag "Cyberdemon"
+
+	States
+	{
+	Spawn:
+		CYBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CYBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Green Cyberdemon
+ACTOR GreenCybieRPG : GreenCybie Replaces GreenCybie
+{
+	Tag "Uncommon Cyberdemon"
+
+	States
+	{
+	Spawn:
+		CYBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CYBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Blue Cyberdemon
+ACTOR BlueCybieRPG : BlueCybie Replaces BlueCybie
+{
+	Tag "Rare Cyberdemon"
+
+	States
+	{
+	Spawn:
+		CYBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CYBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Purple Cyberdemon
+ACTOR PurpleCybieRPG : PurpleCybie Replaces PurpleCybie
+{
+	Tag "Epic Cyberdemon"
+
+	States
+	{
+	Spawn:
+		CYBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CYBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Yellow Cyberdemon
+ACTOR YellowcybieRPG : Yellowcybie Replaces Yellowcybie
+{
+	Tag "Legendary Cyberdemon"
+
+	States
+	{
+	Spawn:
+		SUPR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SUPR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Red Cyberdemon
+ACTOR RedCybieRPG : RedCybie Replaces RedCybie
+{
+	Tag "Moloch"
+
+	States
+	{
+	Spawn:
+		MOLO A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		MOLO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR SummonPortalCybieRPG : SummonPortalCybie Replaces SummonPortalCybie
+{
+	Tag "Hell Portal"
+
+	States
+	{
+	Spawn:
+		SPIR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		SPIR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+ACTOR MolochWraithRPG : MolochWraith Replaces MolochWraith
+{
+	Tag "Wraith"
+
+	States
+	{
+	Spawn:
+		UNHE A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn
+	See:
+		UNHE A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See
+	}
+}
+
+// Black Cyberdemon
+ACTOR BlackCybie2RPG : BlackCybie2 Replaces BlackCybie2
+{
+	Tag "Cybersmith"
+
+	States
+	{
+	Spawn:
+		BSMT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_MEGABOSS | MF_NOAURA)
+		Goto Super::Spawn
+	See:
+		BSMT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_MEGABOSS | MF_NOAURA)
+		Goto Super::See
+	}
+}
+
+// Fireblu Cyberdemon
+ACTOR FireBluCybie2RPG : FireBluCybie2 Replaces FireBluCybie2
+{
+	Tag "FireBlu Cyberdemon"
+
+	States
+	{
+	Spawn:
+		CYBR A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		CYBR A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// --------------------------------------------------
+// Spider Mastermind
+//
+
+// Spider Mastermind Spawner
+ACTOR Colourset17RPG : Colourset17 Replaces DRPGSpiderMastermind
+{
+}
+
+// Common Mastermind
+ACTOR CommonMindRPG : CommonMind Replaces CommonMind
+{
+	Tag "Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SPID A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SPID A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Green Mastermind
+ACTOR GreenMindRPG : GreenMind Replaces GreenMind
+{
+	Tag "Uncommon Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SPID A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SPID A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Blue Mastermind
+ACTOR BlueMindRPG : BlueMind Replaces BlueMind
+{
+	Tag "Rare Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SPID A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SPID A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+ACTOR SpecialSpider1RPG : SpecialSpider1 Replaces SpecialSpider1
+{
+	Tag "Green Spider Baby"
+
+	States
+	{
+	Spawn:
+		BSPI A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::Spawn+1
+	See:
+		BSPI A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_NOXP | MF_NOAURA | MF_NODROPS)
+		Goto Super::See+1
+	}
+}
+
+// Purple Mastermind
+ACTOR PurpleMindRPG : PurpleMind Replaces PurpleMind
+{
+	Tag "Epic Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SKUL A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		DEMO A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Yellow Mastermind
+ACTOR YellowMindRPG : YellowMind Replaces YellowMind
+{
+	Tag "Legendary Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SUPS A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SUPS A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Red Mastermind
+ACTOR RedMindRPG : RedMind Replaces RedMind
+{
+	Tag "Arachnophyte"
+
+	States
+	{
+	Spawn:
+		APYT A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		APYT A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+// Black Mastermind
+ACTOR BlackMind2RPG : BlackMind2 Replaces BlackMind2
+{
+	Tag "Queen Arachne"
+
+	States
+	{
+	Spawn:
+		ARNQ A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_MEGABOSS | MF_NOAURA)
+		Goto Super::Spawn
+	See:
+		ARNQ A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_MEGABOSS | MF_NOAURA)
+		Goto Super::See
+	}
+}
+
+// Fireblu Mastermind
+ACTOR FireBluMind2RPG : FireBluMind2 Replaces FireBluMind2
+{
+	Tag "Flaming Spider Mastermind"
+
+	States
+	{
+	Spawn:
+		SPID A 0 NoDelay ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::Spawn
+	See:
+		SPID A 0 ACS_NamedExecuteAlways("MonsterInit", 0, MF_BOSS)
+		Goto Super::See
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
